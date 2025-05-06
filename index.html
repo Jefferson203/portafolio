@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
+
+    <!-- Los otros scripts -->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js" defer></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+
+<!-- Otros scripts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Mi Portafolio</title>
+
+</head>
+<body>
+
+    <header class="bg-dark text-white py-3 position-relative" id="yo">
+        <!-- Capa blanca transparente -->
+        <div class="white-overlay"></div>
+    
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-12 text-left">
+                    <!-- Agregamos una imagen con la clase "profile-img" para estilos -->
+                    <img src="./img/04 FF.jpg" alt="Tu Foto" class="img-fluid rounded-circle profile-img mb-3 my-md-0">
+
+                </div>
+                <div class="col-md-6 col-12 text-md-left text-center nombre">
+                    <h1 class="display-5">Jefferson Josue Osores Arancel</h1>
+                    <h6><p class="lead small">Bach. Ingeniería de Sistemas - Universidad Católica Sedes Sapientiae</p></h6>
+                </div>
+                <div class="telo col-md-3 col-12 text-md-right text-center mt-3 mt-md-0 ml-md-auto">
+                    <!-- Menú de navegación con enlaces a las secciones -->
+                    <nav class="navbar navbar-expand-md">
+                        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link small" href="#inicio">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link small" href="#sobre-mi">SobreMí</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link small" href="#portfolio">Proyectos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link small" href="#contacto">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section id="sobre-mi" class="section-3d container mt-4 bg-light p-4 rounded">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="titulo-seccion sob">Sobre Mí</h2>
+                <p>¡Hola! Soy Jefferson, tengo <span id="edad"></span> años. 
+                    Soy un profesional creativo con una sólida capacidad de aprendizaje y una gran organización personal. 
+                    Tengo habilidades en programación y me desenvuelvo eficazmente en entornos colaborativos. 
+                    Mi enfoque equilibrado y mi disposición para adaptarme a nuevos desafíos 
+                    me permiten contribuir de manera efectiva a distintos proyectos, asegurando resultados de calidad.</p>
+
+                
+            </div>
+            <div class="col-md-4 text-center">
+                <button class="btn btn-warning mt-3" onclick="descargarCV()">Descargar CV</button>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <section id="Habilidad" class="section-3d container mt-4">
+        <h2 class="titulo-seccion mb-4" style="color: #0786ee;">TECNOLOGÍAS</h2>
+        <div class="row">
+            <!-- Columna 1 -->
+            <div class="col-md-3">
+                <!-- HTML & CSS -->
+                <div class="card habilidad card-htmlcss card-habilidad mb-4 text-center">
+                    <img src="https://img.icons8.com/color/100/000000/html-5.png" class="card-img-top mx-auto mt-3" alt="HTML5">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">HTML5 & CSS3</h5>
+                        <p class="porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+    
+                <!-- JavaScript -->
+                <div class="card habilidad card-js card-habilidad mb-4 text-center">
+                    <img src="https://img.icons8.com/color/100/000000/javascript--v1.png" class="card-img-top mx-auto mt-3" alt="JavaScript">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">JavaScript (JS)</h5>
+                        <p class="porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+    
+                <!-- Python -->
+                <div class="card habilidad card-python card-habilidad mb-4 text-center">
+                    <img src="https://img.icons8.com/color/100/000000/python--v1.png" class="card-img-top mx-auto mt-3" alt="Python">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">Python / Flask</h5>
+                        <p class="porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Columna 2 -->
+            <div class="col-md-3">
+                <!-- Bootstrap -->
+                <div class="card habilidad card-bootstrap card-habilidad mb-4 text-center">
+                    <img src="https://img.icons8.com/color/100/000000/bootstrap.png" class="card-img-top mx-auto mt-3" alt="Bootstrap">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">Bootstrap</h5>
+                        <p class="porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+    
+                <!-- Java -->
+                <div class="card habilidad card-java card-habilidad mb-4 text-center">
+                    <img src="https://img.icons8.com/color/100/000000/java-coffee-cup-logo--v1.png" class="card-img-top mx-auto mt-3" alt="Java">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">Java</h5>
+                        <p class="porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+    
+                <!-- MySQL -->
+                <div class="card habilidad card-mysql card-habilidad mb-4 text-center">
+                    <img src="https://img.icons8.com/ios-filled/100/00758f/mysql-logo.png" class="card-img-top mx-auto mt-3" alt="MySQL">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">MySQL</h5>
+                        <p class="porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Columna 3 -->
+            <div class="col-md-3">
+                <!-- PostgreSQL -->
+                <div class="card habilidad card-postgresql card-habilidad mb-4 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" class="card-img-top mx-auto mt-3" alt="PostgreSQL">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">PostgreSQL</h5>
+                        <p class="porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+    
+                <!-- SQL Server -->
+                <div class="card habilidad card-sqlserver card-habilidad mb-4 text-center">
+                    <img src="https://img.icons8.com/color/96/microsoft-sql-server.png" class="card-img-top mx-auto mt-3" alt="SQL Server">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">SQL Server</h5>
+                        <p class="porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+    
+                <!-- Angular -->
+                <div class="card habilidad card-angular card-habilidad mb-4 text-center">
+                    <img src="https://img.icons8.com/color/100/000000/angularjs.png" class="card-img-top mx-auto mt-3" alt="Angular">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">Angular</h5>
+                        <p class="porcentaje">Nivel Básico</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-md-3">
+                <!-- Git, GitHub, GitLab -->
+                <div class="card habilidad card-git card-habilidad mb-4 text-center">
+                    <img src="https://img.icons8.com/color/100/000000/git.png" class="card-img-top mx-auto mt-3" alt="Git">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">Git, GitHub, GitLab</h5>
+                        <p class="porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+    
+                <!-- PHP -->
+                <div class="card habilidad card-php card-habilidad mb-4 text-center">
+                    <img src="https://img.icons8.com/color/100/000000/php.png" class="card-img-top mx-auto mt-3" alt="PHP">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">PHP</h5>
+                        <p class="porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+    
+                <!-- C# -->
+                <div class="card habilidad card-csharp card-habilidad mb-4 text-center">
+                    <img src="https://img.icons8.com/color/100/000000/c-sharp-logo.png" class="card-img-top mx-auto mt-3" alt="C#">
+                    <div class="card-body">
+                        <h5 class="card-title habilidad-titulo">C#</h5>
+                        <p class="porcentaje">Nivel Intermedio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <section id="portfolio" class="section-3d container mt-4">
+        <h3 class="titulo-seccion" style="color: #0786ee;">Mis Proyectos</h3>
+        <div class="fila">
+            <div class="proyecto">
+                <a href="https://drive.google.com/drive/folders/1bHDZRWWJnZkNaWjAqmvmzBBvc-z2N4vQ?usp=sharing" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="./img/asistencia.png" alt="">
+                    <div class="info">
+                        <h4>Proyecto </h4>
+                        <p>Asistencia - Rec.Facial</p>
+                    </div>
+                </a>
+            </div>
+            <div class="proyecto">
+                <a href="https://drive.google.com/drive/folders/1ms13WnHFWyPbbXvk7j_l_Tn8Hnzjkotl?usp=sharing" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="./img/chatbot.png" alt="">
+                    <div class="info">
+                        <h4>Proyecto </h4>
+                        <p>Chatbot</p>
+                    </div>
+                </a>
+            </div>
+            <div class="proyecto">
+                <a href="https://drive.google.com/drive/folders/1JH9xvlNfutq7MD8nws8w1VAoUhzNIYdl?usp=drive_link" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="./img/pizarra.png" alt="">
+                    <div class="info">
+                        <h4>Proyecto</h4>
+                        <p>Pizarra Digital Mediante Señas por Webcam</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="proyecto">
+                <a href="https://gitlab.com/farmaciasjb/boticasjb" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="./img/farmacia.png" alt="">
+                    <div class="info">
+                        <h4>Proyecto</h4>
+                        <p>Sistema de Ventas Medicamentos</p>
+                    </div>
+                </a>
+            </div>
+            <div class="proyecto">
+                <a href="" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="./img/DNI.png" alt="">
+                    <div class="info">
+                        <h4>Proyecto</h4>
+                        <p>DNI Digital (En Proceso)</p>
+                    </div>
+                </a>
+            </div>
+            <div class="proyecto">
+                <a href="" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="./img/generar.png" alt="">
+                    <div class="info">
+                        <h4>Proyecto</h4>
+                        <p>Creación Farmaco (En Proceso)</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="proyecto">
+                <a href="https://github.com/Jefferson203/Proyectos-Personales/tree/main/VideoConvert" target="_blank">
+                    <div class="overlay"></div>
+                    <img src="./img/vmp3.png" alt="">
+                    <div class="info">
+                        <h4>Proyecto</h4>
+                        <p>VIDEO TO MP3</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="certificaciones" class="section-3d container mt-4">
+        <h2 class="cert titulo-seccion mb-4" style="color: #0786ee;">Certificaciones</h2>
+        <div class="certificaciones-timeline">
+          <div class="cert-item">
+            <h5>Certificación en SIAF</h5>
+            <p>Adquirí habilidades en el Sistema Integrado de Administración Financiera (SIAF), mejorando mi comprensión de la gestión financiera en el sector público.</p>
+            <span class="cert-date">31 Octubre 2022</span>
+          </div>
+          <div class="cert-item">
+            <h5>Administración de Servidores</h5>
+            <p>Obtenida a través de UPAL. Mejoré mis habilidades en gestión de servidores.</p>
+            <span class="cert-date">30 Enero 2023</span>
+          </div>
+          <div class="cert-item">
+            <h5>Certificación en Python</h5>
+            <p>Certificación obtenida a través de Udemy. Adquirí habilidades de programación a nivel intermedio en Python.</p>
+            <span class="cert-date">14 Febrero 2023</span>
+          </div>
+          <div class="cert-item">
+            <h5>Certificación en SIGA</h5>
+            <p>Obtenida a través de IESSP. Esta certificación valida mis conocimientos en el Sistema Integrado de Gestión Administrativa (SIGA).</p>
+            <span class="cert-date">25 Febrero 2023</span>
+          </div>
+          <div class="cert-item">
+            <h5>Certificación en Power BI</h5>
+            <p>Obtenida a través de Udemy. Aprendí a crear reportes dinámicos, utilizar funciones DAX y aplicar fórmulas para el análisis de datos interactivo.</p>
+            <span class="cert-date">12 Octubre 2024</span>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+    
+
+    
+
+    <section id="contacto" class="section-3d container mt-4">
+        <h2 class="cont titulo-seccion mb-4">CONTACTO</h2>
+        <p>Puedes contactarme de las siguientes maneras:</p>
+    
+        <div class="contacto-info">
+            <p><i class="fas fa-envelope"></i> Correo electrónico: <a href="mailto:Josueosores35@gmail.com">Josueosores35@gmail.com</a></p>
+            <p><i class="fab fa-whatsapp"></i> whatsapp: <a href="https://web.whatsapp.com/51939082517" target="_blank">+51 939082517</a></p>
+            <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/jefferson-josue-osores-arancel-052402186/" target="_blank">Jefferson Osores</a></p>
+            <!-- Agrega más información según sea necesario -->
+        </div>
+       
+    </section>
+    
+    <!-- Flecha para volver al inicio -->
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <a href="#yo" style="text-decoration: none; color: #fff;">
+        <div style="background-color: #0786ee; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+            <i class="fas fa-arrow-up" style="font-size: 18px;"></i>
+        </div>
+    </a>
+</div>
+
+    
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Todos los derechos reservados</p>
+    </footer>
+
+
+    <script>
+        function calcularEdad(fechaNacimiento) {
+            const hoy = new Date();
+            const nacimiento = new Date(fechaNacimiento);
+            let edad = hoy.getFullYear() - nacimiento.getFullYear();
+            const mes = hoy.getMonth();
+            const dia = hoy.getDate();
+    
+            // Si aún no ha pasado su cumpleaños este año, resta 1 a la edad
+            if (mes < nacimiento.getMonth() || (mes === nacimiento.getMonth() && dia < nacimiento.getDate())) {
+                edad--;
+            }
+            return edad;
+        }
+    
+        // Cambia esta fecha por tu fecha de nacimiento en formato YYYY-MM-DD
+        const fechaNacimiento = "2001-01-02";  // Ejemplo: 15 de abril de 1999
+    
+        // Llama a la función y actualiza el contenido del span con la edad calculada
+        document.getElementById("edad").innerText = calcularEdad(fechaNacimiento);
+    </script>
+    
+
+
+    <script>
+        document.querySelector('.profile-img').addEventListener('click', function () {
+            this.style.transform = 'rotate(360deg)';
+        });
+    </script>
+
+    <script>
+        function descargarCV() {
+            // Redirige al enlace de descarga directa de Google Drive
+            window.location.href = 'https://drive.google.com/uc?export=download&id=1z0zZ-NvArJFRqHRRGlAs4aPb4rRFi_B3';
+        }
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.body.classList.add("scrolled");
+            } else {
+                document.body.classList.remove("scrolled");
+            }
+        };
+        
+    </script>
+    
+    <!-- Script para desplazarse suavemente al inicio -->
+
+
+
+
+<!-- Script para desplazarse suavemente al inicio -->
+<script>
+    $(document).ready(function () {
+        // Cuando se hace clic en la flecha de vuelta al inicio
+        $('a[href="#yo"]').on('click', function (e) {
+            e.preventDefault();
+
+            // Anima el desplazamiento al área de inicio
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        });
+    });
+</script>
+
+
+
+    
+</body>
+</html>
